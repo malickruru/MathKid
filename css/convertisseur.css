@@ -1,0 +1,70 @@
+
+#popupSceneConvertisseur
+{
+    width: 120%;
+    overflow: visible;
+}
+
+#fenetreConvertisseur{
+    width: 90vw;
+    height: 600px;
+}
+
+.btnConvert{
+    margin: 0 !important;
+}
+
+.formulaireConverssion{
+    display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.ligneDuHaut{
+    width: 80%;
+    height: 50px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 3px solid black;
+}
+
+.ligneDuBasCellule2{
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 40%;
+    font-size: 40px;
+}
+/*-----------------------------------------------*/
+.ligneDuBasCellule1  input{
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    outline: none;
+    text-align: center;
+    font-size: 40px;
+  } 
+
+.ligneDuBas{
+    width: 80%;
+    height: 300px;
+    display: flex;
+   justify-content: space-between;
+}
+
+.ligneDuBasCellule1{
+    width: 50%;
+}
+
+.formulaireConverssion select{
+    background-color: var(--couleurBleu1);
+    font-family: 'Roboto';
+    color: black;
+    padding: 10px 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }

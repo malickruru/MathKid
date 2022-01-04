@@ -1,0 +1,78 @@
+#fenetrePendu{
+    width: 90%;
+}
+
+#NiveauPendu {  display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "titre titre"
+      "img clavier"
+      "reponse indice";
+  }
+  
+  #titrePendu {
+    justify-self: center;
+    align-self: center;
+    grid-area: titre;
+  }
+  
+  #imagePendu{
+    justify-self: center;
+    align-self: center;
+    grid-area: img;
+  }
+  
+  #clavierPendu{
+    justify-self: center;
+    align-self: center;
+    grid-area: clavier;
+    display: flex;
+    
+    flex-wrap: wrap;
+    border: 1px;
+  }
+
+  #clavierPendu div{
+    width: 15%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: #0104d3;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blanchedalmond;
+  }
+
+  #clavierPendu div:hover{
+    opacity: .6;
+    cursor: pointer;
+}
+  
+  #reponsePendu {
+    justify-self: center;
+    align-self: center;
+    grid-area: reponse;
+  }
+  
+  #IndicePendu {
+    justify-self: center;
+    align-self: center;
+    grid-area: indice;
+  }
+
+
+  #imagePendu img{
+      width: 200px;
+      height: auto;
+  }
+  
+  #reponsePendu{
+      font-size: 3rem;
+      letter-spacing: 10px;
+
+  }

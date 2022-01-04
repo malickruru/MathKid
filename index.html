@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MATHKID - apprendre en s'amusant</title>
+    <!--css-->
+   
+    <link rel="stylesheet" href="css/style.css">
+    <!--police-->
+<style>@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');/*Dosis*/</style>    
+
+        
+      <!--importer les icones font awesome-->  
+    <script src="https://kit.fontawesome.com/19d86619a0.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="img/icone.ico" />
+  
+</head>
+
+<body>
+    
+
+    <!-- le header -->
+    <header class="header " id="header">
+      <div class="container">
+      <div class="headerGrid" id="headerGrid">
+        <div class="FlexColumns" >
+          <h1>MATHKID</h1>
+          <p class="policeStandard">Apprendre les maths en s'amusant</p>
+        </div>
+        <div class="FlexCenter" >
+        <div class="container2 FlexSpaceBetween">
+          <a href="#OutilDeCalcul"><div class="ElementMenu FlexColumns ">
+            <img src="img/support.png" >
+            <p >OUTILS DE CALCUL</p>
+          </div></a>
+          <a href="#Recreation"><div class="ElementMenu FlexColumns ">
+            <img src="img/dice.png" >
+            <p >RECREATION</p>
+           </div></a>
+           <a href="#Contact"><div class="ElementMenu FlexColumns ">
+            <img src="img/phone-call.png" >
+            <p  >CONTACTEZ-NOUS</p>
+          </div></a>
+        </div>
+      </div>
+      </div>
+
+      <div class="menuHeader2 FlexSpaceAround" id="menuHeader2">
+<span id="logo"><H1>MK</H1></span>
+ <span id="outilsDeCalcul"><a href="#OutilDeCalcul"><img  src="img/support.png"></a></span>
+ <span id="jeux"><a href="#Recreation"><img id="jeux" src="img/dice.png" ></a></span>
+ <span id="contact"><a href="#Contact"><img id="contact" src="img/phone-call.png" ></a></span>
+      </div>
+    </div>
+    </header>
+
+
+
+    <main class="main">
+<!-- les outils de calcul -->
+
+     
+
+      <section class="OutilDeCalcul" id="OutilDeCalcul">
+        <div class="container FlexColumns PaddingTop">
+          <h1>OUTILS DE CALCUL  </h1>
+          <div class="grille3col2ligne">
+            <div class="carte FlexColumns"> 
+              <img class="icone" src='img/calculator.png'>
+              <h3>La calculatrice</h3>
+              <div class="carteHover textCenter" onclick="OuvrePopup('popupCalculatrice')">
+                <h3>La calculatrice</h3>
+                <p class="policeStandard">Résolvez vos opérations mathématiques grâce à la calculatrice .</p>
+              </div>
+            </div>
+
+
+            <div class="carte textCenter">
+              <img class="icone" src='img/geometry.png'>
+              <h3>Le géomètre</h3>
+              <div class="carteHover textCenter" onclick="OuvrePopup('popupGeometre',0)">
+                <h3>Le géomètre</h3>
+                <p class="policeStandard">Calcule automatiquement l'aire et le périmètre de la forme géométrique de votre choix.</p>
+              </div>
+            </div>
+
+            <div class="carte textCenter">
+              <img class="icone" src='img/scale.png'>
+              <h3>Le convertisseur</h3>
+              <div class="carteHover textCenter" onclick="OuvrePopup('popupConvertisseur')">
+                <h3>Le convertisseur</h3>
+                <p class="policeStandard">Convertit masse, distance et volume.</p>
+              </div>
+            </div>
+
+            <div class="carte textCenter">
+              <img class="icone" src='img/multiply.png'>
+              <h3>Les tables de multiplications</h3>
+              <div class="carteHover textCenter" onclick="OuvrePopup('popupMultiply')">
+                <h3>Les tables de multiplications</h3>
+                <p class="policeStandard">Accédez aux tables de multiplications de 2 à 10 en un clic.</p>
+              </div>
+            </div>
+
+            <div class="CanvasAnimation">
+              <canvas id="Animation1" width="400" height="360"></canvas>              
+            </div>
+
+
+            <div class="carte FlexColumns">
+              <img class="icone" src='img/grammar2.png'>
+              <h3>Astuces de MATHKID</h3>
+              <div class="carteHover textCenter" onclick="OuvrePopup('popupAstuce')">
+                <h3>Astuces de MATHKID</h3>
+                <p class="policeStandard">Ces astuces vous transformerons en as des maths &#128521.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+<!-- citation -->
+      <div Class="citation textCenter" >
+        <p class="policeStandard">" <em> Si vous touchez aux maths, vous ne devez être ni pressés, ni cupides, fusiez-vous roi ou reine.</em> "</p>
+        <h3>Euclide</h3>
+      </div>
+
+      <section class="jeu" id="Recreation">
+        <div class="container  FlexColumns PaddingTop">
+          <h1>RECREATION  </h1>
+          <div class="grille3col">
+            <div class="carteDejeu " id="calculMental"  onclick="OuvrePopup('popupCalculMental')">
+              <div class="card" ><img class="icone" src='img/thinking.png'></div>
+              <div class="card card1"></div>
+              <div class="card card2"></div>
+            </div>
+          
+            <div class="carteDejeu " id="TikTaktoe" onclick="OuvrePopup('popupTikTaktoe')">
+              <div class="card" ><img class="icone" src='img/tic-tac-toe.png'></div>
+              <div class="card card1"></div>
+              <div class="card card2"></div>
+            </div>
+          
+            <div class="carteDejeu" id="pendu" onclick="OuvrePopup('popupPendu')">
+              <div class="card" ><img class="icone" src='img/hangman.png'></div>
+              <div class="card card1"></div>
+              <div class="card card2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div Class="Credit textCenter" >
+        <p><strong>Site conçu et réaliser par : MENSAH </strong><em>RUBENS</em></p>
+      </div>
+
+      <footer  class="footer" id="Contact" >
+        
+
+        <div class="slider container" >
+          <div class="textCenter contact"  >
+            <h1>CONTACTEZ-NOUS</h1>
+            <i class="fab fa-github-square" onclick="window.open('https:github.com/malickruru?tab=repositories')" id="gitHub"> </i>
+          <i class="fab fa-whatsapp-square" onclick="alert('Mon numéro :  +225 07 79 07 42 38')"></i>
+          <i class="far fa-envelope" onclick="OuvrePopup('FormulaireMail')"></i>
+          </div>
+          <div class="partenaire textCenter" id="partenaire">
+            <h1>NOS PARTENAIRES</h1>
+            <img src="img/ifran.jpg " width="225px" height="100px" onclick="window.open('https:www.ifran.ci/')" >
+         <img src="img/7cortex.jpg" width="125px" height="100px" onclick="window.open('https:7cortex.com/')">
+         <img src="img/banniere7d.png" width="150px" height="80px" style="padding-bottom: 15px;" onclick="window.open('https:7develop.com/7D/accueil.htm')">
+          </div>
+        </div>
+        <div class="FlecheSlider">
+        <i  class="fas fa-arrow-left"  id="precedent"  onclick="precedent()"></i>
+        <i  class="fas fa-arrow-right"  id="suivant" onclick="suivant()"></i>
+      </div>
+      
+      </footer>
+
+      <section class="textCenter footer2">
+        <p>Tous droits réservés &copy;	- Décembre 2021</p>
+      </section>
+    </main>
+
+ <!--FENETRES POP-UP-->
+     <!--pop up calculatrice-->
+<div class="popupArrierePlan" id="popupCalculatrice">
+  <div class="popupFenetre" id="fenetreCalculatrice">
+      <div class="FlexSpaceBetween">
+          <h2>Calculatrice</h2>
+      <button class="boutonFermeture" onclick="FermePopup('popupCalculatrice')()"><i class="fas fa-times"></i></button>    
+      </div>
+      <div id="ecranDeCalcul"></div>
+      <div class="clavier">
+          <div class="nombre" id="sept" onclick="MajCalgo('7')">7</div>
+          <div class="nombre" id="huit" onclick="MajCalgo('8')">8</div>
+          <div class="nombre" id="neuf" onclick="MajCalgo('9')">9</div>
+          <div class="operateur" id="plus" onclick="MajCalgo(' + ')">+</div>
+          <div class="nombre" id="quatre" onclick="MajCalgo('4')">4</div>
+          <div class="nombre" id="cinq" onclick="MajCalgo('5')">5</div>
+          <div class="nombre" id="six" onclick="MajCalgo('6')">6</div>
+          <div class="operateur" id="moin" onclick="MajCalgo(' - ')">-</div>
+          <div class="nombre" id="un" onclick="MajCalgo('1')">1</div>
+          <div class="nombre" id="deux" onclick="MajCalgo('2')">2</div>
+          <div class="nombre" id="trois" onclick="MajCalgo('3')">3</div>
+          <div class="operateur" id="diviseur" onclick="MajCalgo(' / ')">/</div>
+          <div class="nombre" id="zero" onclick="MajCalgo('0')">0</div>
+          <div class="nombre" id="point" onclick="MajCalgo('.')">.</div>
+          <div class="operateur" id="multiplicateur" onclick="MajCalgo(' * ')">*</div>
+          <div class="egal" id="egal" onclick="egal()">=</div>
+          <div class="operateur" id="effaceur" onclick="effacer()">effacer</div>
+          <div class="operateur" id="ouvrirParenthèse" onclick="MajCalgo('( ')">(</div>
+          <div class="operateur" id="fermerParenthese" onclick="MajCalgo(' )')">)</div>
+      </div>
+</div>
+</div>
+
+
+<!-- popup Geometre -->
+
+<div class="popupArrierePlan" id="popupGeometre">
+  <div class="popupFenetre popupGrille" id="fenetreGeometre">
+    <div class="popupMenu FlexCenterNormal">
+
+      
+      <ul>
+        <h5>Choisissez une forme :</h5>
+        <li class="popupMenuElem" id=g1 onclick="carre.CalculsPalellogramme(1)">
+              Carré
+        </li>
+        <li class="popupMenuElem" id=g2 onclick="rectangle.CalculsPalellogramme(0)">
+             Rectangle
+        </li>
+        <li class="popupMenuElem" id=g3 onclick="cercle.CalculsCercle()">
+             Cercle
+        </li>
+        <li class="popupMenuElem" id=g4 onclick="triangle.CalculsTriangle()">
+             Triangle
+        </li >
+        <li class="popupMenuElem" id=g5 onclick="trapeze.CalculsTrapeze()">
+             Trapèze
+        </li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart" >
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Le Geometre</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupGeometre')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneGeometre">Le géomètre vous permet de calculer l'aire et le périmètre de la forme géométrique de votre choix.</div>
+    </div>
+  </div>
+</div>
+
+<!-- popup table de multiplication -->
+<div class="popupArrierePlan" id="popupMultiply">
+  <div class="popupFenetre popupGrille" id="fenetreMultiply">
+    <div class="popupMenu">
+      <ul>
+        <h5>Choisissez une table à afficher :</h5>
+        <li class="popupMenuElem" id=mult2 onclick="multiply(2,'mult2')">2</li>
+      <li class="popupMenuElem" id=mult3  onclick="multiply(3,'mult3')">3</li>
+      <li class="popupMenuElem" id=mult4  onclick="multiply(4,'mult4')">4</li>
+      <li class="popupMenuElem" id=mult5 onclick="multiply(5,'mult5')">5</li>
+      <li class="popupMenuElem" id=mult6 onclick="multiply(6,'mult6')">6</li>
+      <li class="popupMenuElem" id=mult7 onclick="multiply(7,'mult7')">7</li>
+      <li class="popupMenuElem" id=mult8 onclick="multiply(8,'mult8')">8</li>
+      <li class="popupMenuElem" id=mult9 onclick="multiply(9,'mult9')">9</li>
+      <li class="popupMenuElem" id=mult10 onclick="multiply(10,'mult10')">10</li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Les tables de multiplications</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupMultiply')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneMultiply">Affichez la table de multiplication de votre choix :</div>
+    </div>
+  </div>
+</div>
+
+<!-- popup astuce Mathkid -->
+
+<div class="popupArrierePlan" id="popupAstuce">
+  <div class="popupFenetre popupGrille" id="fenetreAstuce">
+    <div class="popupMenu">
+      <ul>
+        <h5>Choisissez une astuces :</h5>
+        <li id="lec1" class="popupMenuElem" onclick="lecon1.AfficheAstuce()">Comment comparer des chiffres décimaux</li>
+          <li id="lec2" class="popupMenuElem" onclick="lecon2.AfficheAstuce()">Comment reconnaitre que deux droites sont parralèles</li>
+          <li id="lec3" class="popupMenuElem" onclick="lecon3.AfficheAstuce()">Multiplication de deux nombres décimaux</li>
+          <li  id="lec4" class="popupMenuElem" onclick="lecon4.AfficheAstuce()">Les pourcentages</li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Les astuces de Mathkid</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupAstuce')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneAstuce"></div>
+    </div>
+  </div>
+</div>
+
+<!-- popup convertisseur -->
+
+
+<div class="popupArrierePlan" id="popupConvertisseur">
+  <div class="popupFenetre popupGrille" id="fenetreConvertisseur">
+    <div class="popupMenu">
+      <ul>
+        <h5>Que voulez-vous convertir ?</h5><br>
+        <li id="convert1" class="popupMenuElem" onclick="OuvrirConvertisseur('formulairePoid','convert1')">La masse</li>
+        <li id="convert2" class="popupMenuElem" onclick="OuvrirConvertisseur('formulaireVolume','convert2')">Le volume</li>
+        <li id="convert3" class="popupMenuElem" onclick="OuvrirConvertisseur('formulaireDistance','convert3')">La taille</li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Le convertisseur</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupConvertisseur')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneConvertisseur">
+
+      <!--Masse-->
+      <div id="formulairePoid" class="formulaireConverssion">
+        <div class="ligneDuHaut">
+          <div><label >Unité de la valeur à convertir:</label>
+           <select id="unite1M">
+             <option value="0">Kilogramme</option>
+             <option value="1">Hectogramme</option>
+             <option value="2">Décagramme</option>
+             <option value="3">Gramme</option>
+             <option value="4">Décigramme</option>
+             <option value="5">Centigramme</option>
+             <option value="6">Milligramme</option>
+           </select></div>
+          <div style="border-right: 1px dotted black; border-left: 1px dotted black; padding: 0px 6px;"><button class="btn btnConvert" onclick="Convertisseur('gramme','resultatConverssionmasse','unite1M','unite2M','valeurAConvertirM')" > Convertir <i class="fas fa-sync"></i> </button></div>
+          <div>
+           <label >Unitée de la valeur convertie:</label>
+           <select id="unite2M">
+             <option value="0">Kilogramme</option>
+             <option value="1">Hectogramme</option>
+             <option value="2">Décagramme</option>
+             <option value="3">Gramme</option>
+             <option value="4">Décigramme</option>
+             <option value="5">Centigramme</option>
+             <option value="6">Milligramme</option>
+           </select>
+          </div>
+        </div>
+        <div class="ligneDuBas">
+          <div class="ligneDuBasCellule1"><input type="number" id="valeurAConvertirM"></div>
+          <div class="ligneDuBasCellule2" id="resultatConverssionmasse"></div>
+        </div>
+     </div>
+     <!--volume-->
+     <div id="formulaireVolume" class="formulaireConverssion">
+         <div class="ligneDuHaut">
+           <div><label >Unitée de la valeur à convertir :</label>
+             <select id="unite1V">
+               <option value="0">Kilolitre</option>
+               <option value="1">Hectolitre</option>
+               <option value="2">Décalitre</option>
+               <option value="3">Litre</option>
+               <option value="4">Décilitre</option>
+               <option value="5">Centilitre</option>
+               <option value="6">Millilitre</option>
+             </select></div>
+           <div style="border-right: 1px dotted black; border-left: 1px dotted black; padding: 0px 6px;"> <button class="btn btnConvert" onclick="Convertisseur('litre' ,'resultatConverssionVolume', 'unite1V','unite2V','valeurAConvertirV')" > Convertir <i class="fas fa-sync"></i> </button></div>
+           <div>
+             <label >Unité de la valeur convertie</label>
+             <select id="unite2V">
+               <option value="0">Kilolitre</option>
+               <option value="1">Hectolitre</option>
+               <option value="2">Décalitre</option>
+               <option value="3">Litre</option>
+               <option value="4">Décilitre</option>
+               <option value="5">Centilitre</option>
+               <option value="6">Millilitre</option>
+             </select>
+           </div>
+         </div>
+         <div class="ligneDuBas">
+           <div class="ligneDuBasCellule1"><input type="number" id="valeurAConvertirV"></div>
+           <div class="ligneDuBasCellule2" id="resultatConverssionVolume"></div>
+         </div>
+         
+      
+   </div>
+
+   <!--distance-->
+   <div id="formulaireDistance" class="formulaireConverssion">
+     <div class="ligneDuHaut">
+       <div><label >Unitée de la valeur à convertir :</label>
+         <select id="unite1D">
+           <option value="0">Kilomètre</option>
+           <option value="1">Hectomètre</option>
+           <option value="2">Décamètre</option>
+           <option value="3">Mètre</option>
+           <option value="4">Décimètre</option>
+           <option value="5">Centimètre</option>
+           <option value="6">Millimètre</option>
+         </select></div>
+       <div style="border-right: 1px dotted black; border-left: 1px dotted black; padding: 0px 6px;">    <button class='btn btnConvert' onclick="Convertisseur('mètre' ,'resultatConverssionDistance', 'unite1D','unite2D','valeurAConvertirD')" > Convertir <i class="fas fa-sync"></i> </button></div>
+       <div>
+         <label >Unitée de la valeur convertie</label>
+           <select id="unite2D">
+             <option value="0">Kilomètre</option>
+             <option value="1">Hectomètre</option>
+             <option value="2">Décamètre</option>
+             <option value="3">Mètre</option>
+             <option value="4">Décimètre</option>
+             <option value="5">Centimètre</option>
+             <option value="6">Millimètre</option>
+           </select>
+       </div>
+     </div>
+     <div class="ligneDuBas">
+       <div class="ligneDuBasCellule1"><input type="number" id="valeurAConvertirD"></div>
+       <div class="ligneDuBasCellule2" id="resultatConverssionDistance"></div>
+     </div>
+      
+      
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- jeux -->
+
+<!-- Calcul mental -->
+<div class="popupArrierePlan" id="popupCalculMental">
+  <div class="popupFenetre popupGrille" id="fenetreCalculMental">
+    <div class="popupMenu">
+      <ul>
+        <li class="popupMenuElem" id="CMNiveau1" onclick="demarrerNiveau(1,'CMNiveau1')">Niveau 1</li>
+    <li class="popupMenuElem" id="CMNiveau2" onclick="demarrerNiveau(2,'CMNiveau2')">Niveau 2</li>
+    <li class="popupMenuElem" id="CMNiveau3" onclick="demarrerNiveau(3,'CMNiveau3')">Niveau 3</li>
+    <li class="popupMenuElem" id="CMNiveau4" onclick="demarrerNiveau(4,'CMNiveau4')">Niveau 4</li>
+    <li class="popupMenuElem" id="CMNiveau5" onclick="demarrerNiveau(5,'CMNiveau5')">Niveau 5</li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Calcul mental</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupCalculMental')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneCalculMental">
+
+     <div  id="InfoCm"><strong>Rêgle du jeu : </strong>Résolvez un maximum d'opérations en un temps record<br>Chaque bonne réponse vous donnera 1 point,une mauvaise réponse -2 <br><em>Attention, il existe des opérations en <span style="color: gold; font-weight: bold;" >OR</span> ,elles sont plus difficile mais vous rapporte 5 points</em><br>   
+      <button class="btn" onclick="demarrerNiveau(1,'CMNiveau1')">Commencer</button></div>
+
+      <div  class="sceneCM" id="NiveauCM">
+        <div id="NiveauTitre"></div>
+        <div id="NiveauChrono"></div>
+     <div id="NiveauScore"></div>
+     <div id="NiveauOperation"></div>
+     <div id="NiveauReponse">
+       <form id="formulaire">
+         <input type="number" id="inputreponse" />
+         <button type="submit" class='btn' id="submitreponse">GO</button>
+       </form>
+     </div>
+     <div id="NiveauEvenement"></div>
+    
+   </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- pendu -->
+<div class="popupArrierePlan" id="popupPendu">
+  <div class="popupFenetre popupGrille" id="fenetrePendu">
+    <div class="popupMenu">
+      <ul>
+        <h5>Choisissez une enigme</h5>
+        <li  id="enigm1" class="popupMenuElem" onclick="enigme1.AfficheNiveauPendu('enigm1')" >Enigme 1</li>
+        <li  id="enigm2" class="popupMenuElem" onclick="enigme2.AfficheNiveauPendu('enigm2')">Enigme 2</li>
+        <li  id="enigm3" class="popupMenuElem" onclick="enigme3.AfficheNiveauPendu('enigm3')">Enigme 3</li>
+        <li  id="enigm4" class="popupMenuElem" onclick="enigme4.AfficheNiveauPendu('enigm4')">Enigme 4</li>
+        <li  id="enigm5" class="popupMenuElem" onclick="enigme5.AfficheNiveauPendu('enigm5')">Enigme 5</li>
+      </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Le Pendu</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupPendu')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupScenePendu">
+      <div id="infoPendu" class="textCenter"></div>
+      
+      
+      <div id=NiveauPendu>
+        <div id="titrePendu"></div>
+        <div id="imagePendu"></div>
+        <div id="clavierPendu">
+          <div class="LettreDuClavier" id="Pendua" onclick="enigmes[index].verifLettre('a','Pendua')">a</div>
+          <div class="LettreDuClavier" id="Pendub" onclick="enigmes[index].verifLettre('b','Pendub')">b</div>
+          <div class="LettreDuClavier" id="Penduc" onclick="enigmes[index].verifLettre('c','Penduc')">c</div>
+          <div class="LettreDuClavier" id="Pendud" onclick="enigmes[index].verifLettre('d','Pendud')">d</div>
+          <div class="LettreDuClavier" id="Pendue" onclick="enigmes[index].verifLettre('e','Pendue')">e</div>
+          <div class="LettreDuClavier" id="Pendué" onclick="enigmes[index].verifLettre('é','Pendué')">é</div>
+          <div class="LettreDuClavier" id="Penduè" onclick="enigmes[index].verifLettre('è','Penduè')">è</div>
+          <div class="LettreDuClavier" id="Penduf" onclick="enigmes[index].verifLettre('f','Penduf')">f</div>
+          <div class="LettreDuClavier" id="Pendug" onclick="enigmes[index].verifLettre('g','Pendug')">g</div>
+          <div class="LettreDuClavier" id="Penduh" onclick="enigmes[index].verifLettre('h','Penduh')" >h</div>
+          <div class="LettreDuClavier" id="Pendui" onclick="enigmes[index].verifLettre('i','Pendui')">i</div>
+          <div class="LettreDuClavier" id="Penduj" onclick="enigmes[index].verifLettre('j','Penduj')">j</div>
+          <div class="LettreDuClavier" id="Penduk" onclick="enigmes[index].verifLettre('k','Penduk')">k</div>
+          <div class="LettreDuClavier" id="Pendul" onclick="enigmes[index].verifLettre('l','Pendul')">l</div>
+          <div class="LettreDuClavier" id="Pendum" onclick="enigmes[index].verifLettre('m','Pendum')">m</div>
+          <div class="LettreDuClavier" id="Pendun" onclick="enigmes[index].verifLettre('n','Pendun')">n</div>
+          <div class="LettreDuClavier" id="Penduo" onclick="enigmes[index].verifLettre('o','Penduo')">o</div>
+          <div class="LettreDuClavier" id="Pendup" onclick="enigmes[index].verifLettre('p','Pendup')">p</div>
+          <div class="LettreDuClavier" id="Penduq" onclick="enigmes[index].verifLettre('q','Penduq')">q</div>
+          <div class="LettreDuClavier" id="Pendur" onclick="enigmes[index].verifLettre('r','Pendur')">r</div>
+          <div class="LettreDuClavier" id="Pendus" onclick="enigmes[index].verifLettre('s','Pendus')">s</div>
+          <div class="LettreDuClavier" id="Pendut" onclick="enigmes[index].verifLettre('t','Pendut')">t</div>
+          <div class="LettreDuClavier" id="Penduu" onclick="enigmes[index].verifLettre('u','Penduu')">u</div>
+          <div class="LettreDuClavier" id="Penduv" onclick="enigmes[index].verifLettre('v','Penduv')">v</div>
+          <div class="LettreDuClavier" id="Penduw" onclick="enigmes[index].verifLettre('w','Penduw')">w</div>
+          <div class="LettreDuClavier" id="Pendux" onclick="enigmes[index].verifLettre('x','Pendux')">x</div>
+          <div class="LettreDuClavier" id="Penduy" onclick="enigmes[index].verifLettre('y','Penduy')">y</div>
+          <div class="LettreDuClavier" id="Penduz" onclick="enigmes[index].verifLettre('z','Penduz')">z</div>
+        </div>
+        <div id="reponsePendu"></div>
+        <div id=IndicePendu></div>
+      </div>
+    
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- tiktaktoe -->
+<div class="popupArrierePlan" id="popupTikTaktoe">
+  <div class="popupFenetre popupGrille" id="fenetreTikTakToe">
+    <div class="popupMenu">
+      <ul >
+      <div id="scoreTictactoe" class="divTTT">
+        <h4>SCORE :</h4>
+         Vous : 0 <br>
+        IA : 0
+      </div>
+      <div id="nbrDeParties" class="divTTT">
+       <h4> Partie n° : 1</h4>
+      </div>
+      <div id="btnRejouerTictactoe" class="divTTT">
+        <button class="btn btnBlanc" onclick=" rejouer()">Rejouer</button>            
+      </div>
+      
+    </ul>
+    </div>
+    <div class="popupApli FlexColumnsStart">
+      <div class="FlexSpaceBetween popupHeader">
+        <h2>Tik Tak Toe</h2>
+    <button class="boutonFermeture" onclick="FermePopup('popupTikTaktoe')"><i class="fas fa-times"></i></button>    
+    </div>
+    <div class="popupScene" id="popupSceneTiktoe">
+
+      <div class="grilleDeJeu" id="grille">
+        <div id="cell1-1"><div class="cellTTT" onclick="tour(1,'cell1-1',0)"></div></div>
+        <div id="cell1-2"><div class="cellTTT" onclick="tour(1,'cell1-2',1)"></div></div>
+        <div id="cell1-3"><div class="cellTTT" onclick="tour(1,'cell1-3',2)"></div></div>
+        <div id="cell2-1"><div class="cellTTT" onclick="tour(1,'cell2-1',3)"></div></div>
+        <div id="cell2-2"><div class="cellTTT" onclick="tour(1,'cell2-2',4)"></div></div>
+        <div id="cell2-3"><div class="cellTTT" onclick="tour(1,'cell2-3',5)"></div></div>
+        <div id="cell3-1"><div class="cellTTT" onclick="tour(1,'cell3-1',6)"></div></div>
+        <div id="cell3-2"><div class="cellTTT" onclick="tour(1,'cell3-2',7)"></div></div>
+        <div id="cell3-3"><div class="cellTTT" onclick="tour(1,'cell3-3',8)"></div></div>
+      </div>
+      <div id='InfosPartie' >
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- formulaire pour envoie de mail -->
+<div class="popupArrierePlan" id="FormulaireMail">
+  <div class="popupFenetre" id="fenetreMail">
+      <div class="FlexSpaceBetween">
+          <h2>Contact</h2>
+      <button class="boutonFermeture" onclick="FermePopup('FormulaireMail')()"><i class="fas fa-times"></i></button>    
+      </div>
+      <form method="post" action="script/mail.php">
+        <label for="">Une remarque ? une suggestion ? N'hésitez pas à m'écrire.</label>
+        <label for="nom">Votre Nom (obligatoire)</label>
+        <input type="text" name="nom" id="">
+        <label for="mail">Votre e-mail (obligatoire)</label>
+        <input type="email" name="mail" id="">
+        <label for="sujet">Sujet</label>
+        <input type="text" name="sujet" id="">
+        <label for="msg">Votre message</label>
+        <textarea name="msg" rows="10" cols="30" name="message"></textarea>
+        <input type="submit">
+      </form>
+</div></div>
+
+
+  <!-- le loader -->
+<div class="loader">
+  <h1>site made by RuRu</h1>
+  <div></div>
+  </div> 
+
+  <!-- version portable -->
+<div class="msgTelephone textCenter policeStandard FlexCenter"> <h1>Oups, MATHKID n'est pas conçu pour être utilisé sur téléphone portable &#128555; </h1></div>
+ 
+  
+    <!-- script  -->
+  <script src="script/loader.js"></script>
+  <script src="script/header.js"></script>
+  <script src="script/Animation1.js"></script>
+  <script src="script/slider.js"></script>
+  <script src="script/popup.js"></script>
+  <script src="script/calculatrice.js"></script>
+  <script src="script/Geometre.js"></script>
+  <script src="script/multiplication.js"></script>
+  <script src="script/Astuce.js"></script>
+  <script src="script/convertisseur.js"></script>
+  <script src="script/CalculMental.js"></script>
+  <script src="script/Pendu.js"></script>
+  <script src="script/TikTakToe.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.sceneCM{
+    display: none;
+    grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "titre titre"
+    "chrono score"
+    "operation operation"
+    "submit submit"
+    "event event"; 
+}
+
+#NiveauTitre { grid-area: titre;
+    justify-self: center ;}
+#NiveauChrono { grid-area: chrono; }
+#NiveauScore { grid-area: score; 
+    justify-self: right;}
+#NiveauEvenement { grid-area: event;
+color: blue;
+justify-self: center;
+align-items: start;}
+#NiveauOperation { grid-area: operation; 
+    justify-self: center;
+   align-items: start;
+font-size: 1.6rem;}
+#NiveauReponse { grid-area: submit; 
+    justify-self: center;
+    align-items: start;
+}
+
+
+
+
+#inputreponse{
+    outline: none;
+    border: 0.5px solid black;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+}
