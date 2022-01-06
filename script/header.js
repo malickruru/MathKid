@@ -7,7 +7,7 @@ var profondeur;
 function header(){
     profondeur = window.pageYOffset;
     // console.log(profondeur);
-    if(profondeur > 50){
+    if(profondeur > 20){
         document.getElementById('headerGrid').style.display = 'none' ;
         document.getElementById('header').classList.remove('header'); 
         document.getElementById('header').classList.add('header2'); 
