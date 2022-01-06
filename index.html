@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MATHKID - apprendre en s'amusant</title>
     <!--css-->
    
     <link rel="stylesheet" href="css/style.css">
+  
     <!--police-->
 <style>@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');/*Dosis*/</style>    
 
@@ -104,7 +106,7 @@
             </div>
 
             <div class="CanvasAnimation">
-              <canvas id="Animation1" width="400" height="360"></canvas>              
+              <img src="img/math.png" >             
             </div>
 
 
@@ -163,7 +165,7 @@
             <h1>CONTACTEZ-NOUS</h1>
             <i class="fab fa-github-square" onclick="window.open('https:github.com/malickruru?tab=repositories')" id="gitHub"> </i>
           <i class="fab fa-whatsapp-square" onclick="alert('Mon numéro :  +225 07 79 07 42 38')"></i>
-          <i class="far fa-envelope" onclick="OuvrePopup('FormulaireMail')"></i>
+          <i class="far fa-envelope" onclick="alert('Mail :  rubs99rstd@gmail.com')"></i>
           </div>
           <div class="partenaire textCenter" id="partenaire">
             <h1>NOS PARTENAIRES</h1>
@@ -583,26 +585,7 @@
 </div>
 
 
-<!-- formulaire pour envoie de mail -->
-<div class="popupArrierePlan" id="FormulaireMail">
-  <div class="popupFenetre" id="fenetreMail">
-      <div class="FlexSpaceBetween">
-          <h2>Contact</h2>
-      <button class="boutonFermeture" onclick="FermePopup('FormulaireMail')()"><i class="fas fa-times"></i></button>    
-      </div>
-      <form method="post" action="script/mail.php">
-        <label for="">Une remarque ? une suggestion ? N'hésitez pas à m'écrire.</label>
-        <label for="nom">Votre Nom (obligatoire)</label>
-        <input type="text" name="nom" id="">
-        <label for="mail">Votre e-mail (obligatoire)</label>
-        <input type="email" name="mail" id="">
-        <label for="sujet">Sujet</label>
-        <input type="text" name="sujet" id="">
-        <label for="msg">Votre message</label>
-        <textarea name="msg" rows="10" cols="30" name="message"></textarea>
-        <input type="submit">
-      </form>
-</div></div>
+
 
 
   <!-- le loader -->
@@ -618,7 +601,7 @@
     <!-- script  -->
   <script src="script/loader.js"></script>
   <script src="script/header.js"></script>
-  <script src="script/Animation1.js"></script>
+  
   <script src="script/slider.js"></script>
   <script src="script/popup.js"></script>
   <script src="script/calculatrice.js"></script>
