@@ -1,13 +1,11 @@
-
-
 // fonction qui sera utiliser sur tout les menus
 function ChangeClassActive(id){
     TabMenuElem = document.querySelectorAll(".popupMenuElem");
     
    TabMenuElem.forEach(element => {
-       element.classList.remove("active");
+       element.classList.remove("element-actif");
    });
-   document.getElementById(id).classList.add("active");
+   document.getElementById(id).classList.add("element-actif");
 }
 
 

@@ -1,86 +1,86 @@
 /*calculatrice*/
-#popupCalculatrice{
-    color: #fff;
+#popup-calculatrice > .modal-dialog > .modal-content {
+  color: #fff;
+  background-color: #4f92ba;
 }
 
-#fenetreCalculatrice{
-    width: 40%;
-    background-color: #4F92BA;
-    margin: 1% auto;
-    padding: 1em 3em;
+#ecranDeCalcul {
+  background-color: #fff;
+  color: black;
+  width: 95%;
+  height: 70px;
+  font-size: 30px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+.clavier {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-content: flex-end; */
+
+  width: 100%;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.nombre {
+  width: 15%;
+  /* height: 75px; */
+  border-radius: 5px;
+  background-color: #0104d3;
+  /* margin-top: 1em;
+  margin-right: 1em; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 1em;
+  padding: 1em;
 }
 
-#ecranDeCalcul{
-    background-color: #fff;
-    color: black;
-    width: 95%;
-    height: 70px;
-    font-size: 30px;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    padding:  5px 15px;
-    box-sizing: border-box;
-}
-.clavier{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end ;
-    width: 100%;
-    font-weight: bolder;
-    font-size: 15px;
-
-}
-.nombre{
-    width: 22%;
-    height: 75px;
-    border-radius: 5px;
-    background-color: #0104d3;
-    margin-top: 1em;
-    margin-right: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
+.nombre:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.nombre:hover{
-    opacity: .6;
-    cursor: pointer;
+.operateur {
+  width: 15%;
+  /* height: 75px; */
+  border-radius: 5px;
+  background-color: #ff8c00;
+  /* margin-top: 1em;
+  margin-right: 1em; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  margin: 1em;
+  padding: 1em;
 }
 
-.operateur{
-    width: 22%;
-    height: 75px;
-    border-radius: 5px;
-    background-color: #FF8C00;
-    margin-top: 1em;
-    margin-right: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    font-size: 1em;
+.operateur:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.operateur:hover{
-    opacity: .6;
-    cursor: pointer;
+.egal {
+  width: 15%;
+  /* height: 75px; */
+  border-radius: 5px;
+  background-color: #fbff00;
+  color: black;
+  /* margin-top: 1em;
+  margin-right: 1em; */
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  padding: 1em;
 }
-
-.egal{
-    width: 22%;
-    height: 75px;
-    border-radius: 5px;
-    background-color: #fbff00;
-    color: black; 
-    margin-top: 1em;
-    margin-right: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-}
-.egal:hover{
-    opacity: .6;
-    cursor: pointer;
+.egal:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }

@@ -1,70 +1,53 @@
-
-#popupSceneConvertisseur
-{
-    width: 120%;
-    overflow: visible;
+.formulaireConverssion {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#fenetreConvertisseur{
-    width: 90vw;
-    height: 600px;
+.ligneDuHaut {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
 }
 
-.btnConvert{
-    margin: 0 !important;
-}
-
-.formulaireConverssion{
-    display: none;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-
-.ligneDuHaut{
-    width: 80%;
-    height: 50px;
-   display: flex;
-   justify-content: space-between;
-   border-bottom: 3px solid black;
-}
-
-.ligneDuBasCellule2{
-    text-align: center;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    width: 40%;
-    font-size: 40px;
+.ligneDuBasCellule2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
 }
 /*-----------------------------------------------*/
-.ligneDuBasCellule1  input{
-    width: 100%;
-    height: 300px;
-    z-index: -1;
-    outline: none;
-    text-align: center;
-    font-size: 40px;
-  } 
-
-.ligneDuBas{
-    width: 80%;
-    height: 300px;
-    display: flex;
-   justify-content: space-between;
+.ligneDuBasCellule1 input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  font-size: 40px;
 }
 
-.ligneDuBasCellule1{
-    width: 50%;
+.ligneDuBasCellule1,
+.ligneDuBasCellule2 {
+  width: 50%;
+  height: 100%;
 }
 
-.formulaireConverssion select{
-    background-color: var(--couleurBleu1);
-    font-family: 'Roboto';
-    color: black;
-    padding: 10px 5px;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
+.formulaireConverssion select {
+  background-color: #b6d7de;
+  font-family: "Dosis";
+  color: black;
+  padding: 10px 5px;
+  font-size: 15px;
+  margin: 10px 50px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.ligneDuBas {
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}

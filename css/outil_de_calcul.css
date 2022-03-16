@@ -1,0 +1,61 @@
+#outil_de_calcul {
+  padding: 50px 0 50px 0;
+  color: #2b3a3d;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.carte {
+  background-color: #b6d7de;
+  padding: 20px 0;
+  position: relative;
+  height: 250px;
+  margin: 20px 10px;
+  box-sizing: border-box;
+}
+
+.icone {
+  height: auto;
+  width: 75px;
+}
+
+.carteHover {
+  background-color: #3943cef8;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  transition: opacity 500ms ease-out;
+  cursor: pointer;
+}
+
+.carteHover h3 {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+}
+
+.carteHover p {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+}
+
+.carteHover:hover {
+  opacity: 1;
+}
+
+.carteHover:hover h3 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.carteHover:hover p {
+  transform: translateY(0px);
+  opacity: 1;
+}

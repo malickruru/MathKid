@@ -1,0 +1,79 @@
+.divTTT {
+  padding: 30px 5px;
+}
+
+.grilleDeJeu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  margin: 0 90px;
+}
+
+/*style de la grille*/
+.grilleDeJeu div:nth-child(1),
+.grilleDeJeu div:nth-child(4),
+.grilleDeJeu div:nth-child(7) {
+  border-right: 3px solid black;
+}
+
+.grilleDeJeu div:nth-child(1),
+.grilleDeJeu div:nth-child(2),
+.grilleDeJeu div:nth-child(3),
+.grilleDeJeu div:nth-child(4),
+.grilleDeJeu div:nth-child(5),
+.grilleDeJeu div:nth-child(6) {
+  border-bottom: 3px solid black;
+}
+
+.grilleDeJeu div:nth-child(3),
+.grilleDeJeu div:nth-child(6),
+.grilleDeJeu div:nth-child(9) {
+  border-left: 3px solid black;
+}
+
+.cellTTT {
+  background-color: rgb(207, 204, 204);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cellTTT:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.imgTTT {
+  width: 130px;
+  height: 130px;
+}
+
+#InfosPartie {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+  color: white;
+  position: relative;
+  top: -400px;
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.blueI {
+  color: blue;
+  font-size: 3em;
+}
+
+.redI {
+  color: red;
+  font-size: 3em;
+}

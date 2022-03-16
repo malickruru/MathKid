@@ -1,10 +1,21 @@
 @import url(loader.css);
-@import url(popup.css);
+@import url(bootstrap.css);
+@import url(header.css);
+@import url(outil_de_calcul.css);
+@import url(jeu.css);
+@import url(carousel.css);
 
-/*---------------------------------------------style généraux du site*/
+/*------------------------popup-----------------*/
+@import url(popup.css);
+@import url(calculatrice.css);
+@import url(convertisseur.css);
+@import url(calculMental.css);
+@import url(tiktactoe.css);
+@import url(pendu.css);
+
 @font-face {
-  font-family: "big-john-pro-regular";
-  src: url("../font/BJP/bigjohnpro-regular.otf");
+  font-family: "big-john-pro-bold";
+  src: url("../font/BJP/bigjohnpro-bold.otf");
 }
 
 @font-face {
@@ -13,99 +24,21 @@
 }
 
 @font-face {
-  font-family: "big-john-pro-bold";
-  src: url("../font/BJP/bigjohnpro-bold.otf");
+  font-family: "big-john-pro-regular";
+  src: url("../font/BJP/bigjohnpro-regular.otf");
 }
 
-:root {
-  --couleurRouge: #fe5126;
-  --couleurClair: #fcedda;
-  --couleurBleu1: #b6d7de;
-  --couleurBleu2: #daecee;
-  --couleurSombre: #2b3a3d;
-  --policeGras: "big-john-pro-bold";
-  --policeStandard: "big-john-pro-regular";
-  --policeFaible: "big-john-pro-light";
-  --GrandeLargeur: 80vw;
-  --petiteLargeur: 50vw;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
-.container {
-  width: var(--GrandeLargeur);
-  margin: auto;
-}
-
-.container2 {
-  width: var(--petiteLargeur);
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
+h1,
 h3 {
-  font-family: var(--policeGras);
-  font-size: 1.8rem;
+  font-family: "big-john-pro-bold" !important ;
 }
 
 p {
-  font-family: var(--policeFaible);
+  font-family: "big-john-pro-light" !important ;
 }
 
-h1 {
-  font-family: var(--policeGras);
-  font-size: 3rem;
-}
-
-.policefaible {
-  font-family: var(--policeFaible);
-}
-
-.policeStandard {
-  font-family: var(--policeStandard);
-  font-size: 1.4rem;
-}
-
-.FlexSpaceBetween {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.FlexSpaceAround {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.FlexCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.FlexStartCenter {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.FlexCenterNormal {
-  display: flex;
-  justify-content: normal;
-  align-items: center;
-}
-
-.FlexColumnsStart {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+a {
+  text-decoration: none !important;
 }
 
 .FlexColumns {
@@ -115,188 +48,19 @@ h1 {
   flex-direction: column;
 }
 
-.textCenter {
-  text-align: center;
-}
-
-.PaddingTop {
-  padding-top: 100px;
-}
-
-.btn {
-  outline: none;
-  border: none;
-  padding: 10px 5px;
-  font-family: "Roboto";
-  font-size: 0.9rem;
-  background-color: var(--couleurBleu2);
-  color: var(--couleurSombre);
-  cursor: pointer;
-  margin: 15px 0;
-}
-
-.btn:hover {
-  background-color: var(--couleurBleu1);
-}
-
-.btnBlanc {
-  background-color: white;
-  color: var(--couleurSombre);
-}
-
-/*-------------------------------------------HEADER----------------------------------------*/
-
-.header {
-  height: 100vh;
-  /* width:100vw; */
-  background-color: var(--couleurRouge);
-  color: #fff;
-  transition: height 300ms ease-out, background-color 300ms ease-out;
-  z-index: 100;
-  position: absolute;
-  width: 100%;
-}
-
-.headerGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 8fr 2fr;
-  gap: 0px 0px;
-  height: 100vh;
-  margin: auto;
-}
-
-.ElementMenu {
-  cursor: pointer;
-  position: relative;
-  padding-top: 5px;
-  top: 0;
-  transition: top 500ms ease-out;
-  width: 15vw;
-}
-
-.ElementMenu img {
-  width: 3vw;
-  height: auto;
-  filter: invert(100%);
-}
-
-.ElementMenu:hover {
-  top: -15px;
-  border-top: 1px dashed #fff;
-}
-
-/*class du header pour le reste de la page*/
-
-.header2 {
-  height: 15vh;
-  width: 100vw;
-  background-color: var(--couleurSombre);
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  transition: height 300ms ease-out, background-color 300ms ease-out;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
-  z-index: 100;
-}
-
-.menuHeader2 {
-  display: none;
-  margin: auto;
-  height: 12vh;
-  width: 40vw;
-}
-.menuHeader2 img {
-  width: 2.5vw;
-  height: auto;
-  cursor: pointer;
-  position: relative;
-  filter: invert(1);
-}
-
-.menuHeader2 img:hover {
-  opacity: 0.6;
-}
-
-#logo {
-  position: absolute;
-  color: #fff;
-  left: 10px;
-}
-
-#outilsDeCalcul::before {
-  display: block;
-  content: "OUTILS DE CALCUL";
-  position: absolute;
-  color: #fff;
-  font-family: var(--policeStandard);
-  bottom: 5px;
-  left: 45%;
-  height: auto;
-  width: auto;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
-}
-#jeux::before {
-  display: block;
-  content: "RECREATION";
-  position: absolute;
-  color: #fff;
-  font-family: var(--policeStandard);
-  bottom: 5px;
-  left: 47%;
-  height: auto;
-  width: auto;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
-}
-#contact::before {
-  display: block;
-  content: "CONTACTEZ-NOUS";
-  position: absolute;
-  color: #fff;
-  font-family: var(--policeStandard);
-  bottom: 5px;
-  left: 45%;
-  height: auto;
-  width: auto;
-  opacity: 0;
-  transition: opacity 500ms ease-out;
-}
-
-#outilsDeCalcul:hover::before {
-  opacity: 1;
-}
-
-#jeux:hover::before {
-  opacity: 1;
-}
-
-#contact:hover::before {
-  opacity: 1;
-}
-
-.main {
-  position: absolute;
-  top: calc(50px + 10vh);
-  width: 100%;
-  z-index: 1;
-}
-
 /*-------------------------------scroll bar-----------------------------------*/
-/* width */
+
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--couleurSombre);
+  background: #343a40;
   border-radius: 10px;
 }
 
@@ -305,302 +69,9 @@ h1 {
   cursor: grab;
 }
 
-/*-------------------------------Section outil de calcul-----------------------------------*/
-
-.OutilDeCalcul {
-  color: var(--couleurSombre);
-}
-
-.grille3col2ligne {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
-}
-
-.carte {
-  margin: 40px 15px;
-  background-color: var(--couleurBleu1);
-  padding: 20px 0;
-  position: relative;
-}
-
-.icone {
-  height: auto;
-  width: 75px;
-}
-
-.carteHover {
-  background-color: #3943cef8;
-  color: white;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  opacity: 0;
-  box-sizing: border-box;
-  padding: 30px 20px;
-  transition: opacity 500ms ease-out;
-  cursor: pointer;
-}
-
-.carteHover h3 {
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
-}
-
-.carteHover p {
-  transform: translateY(50px);
-  opacity: 0;
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
-}
-
-.carteHover:hover {
-  opacity: 1;
-}
-
-.carteHover:hover h3 {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.carteHover:hover p {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.CanvasAnimation {
-  border: white 1px solid;
-}
-
-.CanvasAnimation img {
-  width: 100%;
-}
-
-/*--------------------------------------------------section citation----------------------*/
-
+/*---------------------------------------citation------------------------*/
 .citation {
   padding: 20px 0;
   color: white;
-  background-color: var(--couleurSombre);
-}
-
-/*-----------------------------------section recreation -------------------------------------------------------------------*/
-
-.jeu {
-  background-color: var(--couleurBleu2);
-  min-height: 80vh;
-}
-
-.grille3col {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  width: 100%;
-}
-
-.card {
-  background-color: #ffbd9b;
-  border: 1px solid #ffbd9b;
-  border-radius: 15px;
-  height: 150px;
-  width: 150px;
-  position: relative;
-  overflow: hidden;
-  transition: all 200ms ease-out 100ms;
-  z-index: 100;
-  transform: rotateX(60deg) rotateZ(-45deg);
-  top: 0;
-}
-
-.card img {
-  transform: rotateZ(90deg);
-  margin: 25% 25%;
-}
-
-.card1 {
-  background-color: #fd7e3e;
-  z-index: 90;
-  left: 4px;
-  top: -150px;
-}
-
-.card2 {
-  background-color: #fc5400;
-  z-index: 80;
-  left: 8px;
-  top: -300px;
-}
-
-.carteDejeu:hover .card {
-  transform: rotateX(60deg) rotateZ(-45deg) translateZ(20px);
-}
-.carteDejeu:hover .card1 {
-  transform: rotateX(60deg) rotateZ(-45deg) translateZ(10px);
-}
-
-.carteDejeu:hover .card2 {
-  transform: rotateX(60deg) rotateZ(-45deg) translateZ(0px);
-}
-
-.carteDejeu {
-  height: 150px;
-  cursor: pointer;
-  margin: 30px 0 30px 0;
-  padding: 0 30%;
-}
-
-#calculMental::after {
-  color: rgba(0, 0, 0, 0);
-  transition: color 500ms ease-out 100ms;
-  content: "Calcul Mental";
-  font-weight: bold;
-  font-family: "big-john-pro-regular";
-  position: relative;
-  z-index: 102;
-  top: -500px;
-  left: 20px;
-  font-size: 20px;
-}
-
-#calculMental:hover::after {
-  color: #fc5400;
-}
-
-#TikTaktoe::after {
-  color: rgba(0, 0, 0, 0);
-  transition: color 500ms ease-out 100ms;
-  content: "Tic tac toe";
-  font-weight: bold;
-  font-family: "big-john-pro-regular";
-  position: relative;
-  z-index: 102;
-  top: -500px;
-  left: 30px;
-  font-size: 20px;
-}
-
-#TikTaktoe:hover::after {
-  color: #fc5400;
-}
-
-#pendu::after {
-  color: rgba(0, 0, 0, 0);
-  transition: color 500ms ease-out 100ms;
-  content: "Pendu";
-  font-weight: bold;
-  font-family: "big-john-pro-regular";
-  position: relative;
-  z-index: 102;
-  top: -500px;
-  left: 50px;
-  font-size: 20px;
-}
-
-#pendu:hover::after {
-  color: #fc5400;
-}
-
-/*/--------------------------------------------section credit---------------------------------------*/
-.Credit {
-  padding: 20px 0;
-  color: white;
-  background-color: var(--couleurSombre);
-  font-size: 1.6rem;
-}
-
-/*---------------------------------------------------footer-----------------------------------------------*/
-.footer {
-  background-color: var(--couleurClair);
-  min-height: 50vh;
-}
-
-.slider {
-  position: relative;
-  height: 100%;
-  padding: 30px;
-  overflow: hidden;
-}
-.slider i {
-  font-size: 5em;
-  cursor: pointer;
-  margin: 0 0.5em;
-}
-
-.slider i:hover {
-  font-size: 5em;
-  cursor: pointer;
-  margin: 0 0.5em;
-  color: var(--couleurRouge);
-}
-.partenaire {
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  position: absolute;
-  top: 0;
-  background-color: var(--couleurClair);
-  transition: transform 2s ease;
-  transform: translateX(80vw);
-}
-
-#precedent {
-  opacity: 0.6;
-}
-
-.partenaire img {
-  filter: grayscale(1);
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-.partenaire img:hover {
-  filter: grayscale(0);
-}
-
-.FlecheSlider {
-  position: absolute;
-  left: 45%;
-}
-
-.FlecheSlider i {
-  padding: 5px 20px;
-  cursor: pointer;
-  font-size: 1.8em;
-}
-
-.footer2 {
-  background-color: var(--couleurSombre);
-  color: whitesmoke;
-  margin: 0 0;
-}
-
-.footer2 p {
-  margin: 0 0;
-  font-size: 1.3rem;
-}
-
-/*---------------------réactivité teléphone---------------------------------------------------*/
-
-.msgTelephone {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--couleurSombre);
-  color: #fff;
-  font-size: 1.2rem;
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .msgTelephone {
-    display: flex;
-  }
+  background-color: #2b3a3d;
 }

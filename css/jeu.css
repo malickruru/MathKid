@@ -1,0 +1,106 @@
+.jeu {
+  background-color: #daecee;
+  padding: 50px 0 100px 0;
+}
+
+.card {
+  background-color: #ffbd9b;
+  border: 1px solid #ffbd9b;
+  border-radius: 15px;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  overflow: hidden;
+  transition: all 200ms ease-out 100ms;
+  z-index: 3;
+  transform: rotateX(60deg) rotateZ(-45deg);
+  top: 0;
+}
+
+.card img {
+  transform: rotateZ(90deg);
+  margin: 25% 25%;
+}
+
+.card1 {
+  background-color: #fd7e3e;
+  z-index: 2;
+  left: 4px;
+  top: -150px;
+}
+
+.card2 {
+  background-color: #fc5400;
+  z-index: 1;
+  left: 8px;
+  top: -300px;
+}
+
+.carteDejeu:hover .card {
+  transform: rotateX(60deg) rotateZ(-45deg) translateZ(20px);
+}
+.carteDejeu:hover .card1 {
+  transform: rotateX(60deg) rotateZ(-45deg) translateZ(10px);
+}
+
+.carteDejeu:hover .card2 {
+  transform: rotateX(60deg) rotateZ(-45deg) translateZ(0px);
+}
+
+.carteDejeu {
+  height: 150px;
+  cursor: pointer;
+  margin: 30px 0 30px 0;
+  padding: 0 30%;
+}
+
+#calculMental::after {
+  color: rgba(0, 0, 0, 0);
+  transition: color 500ms ease-out 100ms;
+  content: "Calcul Mental";
+  font-weight: bold;
+  font-family: "big-john-pro-regular";
+  position: relative;
+  z-index: 1;
+  top: -500px;
+
+  font-size: 20px;
+}
+
+#calculMental:hover::after {
+  color: #fc5400;
+}
+
+#TikTaktoe::after {
+  color: rgba(0, 0, 0, 0);
+  transition: color 500ms ease-out 100ms;
+  content: "Tic tac toe";
+  font-weight: bold;
+  font-family: "big-john-pro-regular";
+  position: relative;
+  z-index: 1;
+  top: -500px;
+
+  font-size: 20px;
+}
+
+#TikTaktoe:hover::after {
+  color: #fc5400;
+}
+
+#pendu::after {
+  color: rgba(0, 0, 0, 0);
+  transition: color 500ms ease-out 100ms;
+  content: "Pendu";
+  font-weight: bold;
+  font-family: "big-john-pro-regular";
+  position: relative;
+  z-index: 1;
+  top: -500px;
+
+  font-size: 20px;
+}
+
+#pendu:hover::after {
+  color: #fc5400;
+}
